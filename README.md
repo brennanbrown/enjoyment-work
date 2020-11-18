@@ -5,7 +5,7 @@
     <img src="/assets/img/profile.png" alt="Logo" width="120" height="120">
   </a>
 
-  <h3 align="center">Enjoyment-work Theme for Jekyll</h3>
+  <h3 align="center">Enjoyment Work: Theme for Jekyll</h3>
 
   <p align="center">
     An extensive Jekyll theme designed to have similar functionality to Roam Research.
@@ -23,13 +23,13 @@
 
 <!-- BADGES -->
 <p align="center">
+<img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/3cc0e6e6-1ec8-4af8-ad0e-aced073231c4/deploy-status">
 <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/brennanbrown/enjoyment-work"> 
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/brennanbrown/enjoyment-work"> 
 <a href="https://github.com/brennanbrown/enjoyment-work/search?l=html"><img alt="GitHub top language" src="https://img.shields.io/github/languages/top/brennanbrown/enjoyment-work"></a>
 <a href="https://github.com/brennanbrown/enjoyment-work/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/brennanbrown/enjoyment-work"></a> 
 <a href="https://github.com/brennanbrown/enjoyment-work/commits/main"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/brennanbrown/enjoyment-work"></a>
 <a href="https://github.com/brennanbrown/enjoyment-work/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/brennanbrown/enjoyment-work"></a> 
-<a href="https://enjoyment-work.netlify.app"><img alt="Website" src="https://img.shields.io/website?down_color=red&down_message=Offline%21&label=Status&up_color=darkgreen&up_message=Online%21&url=https%3A%2F%2Fenjoyment-work.netlify.app"></a>
 <br />
 <a href="https://github.com/brennanbrown?tab=followers"><img alt="GitHub followers" src="https://img.shields.io/github/followers/brennanbrown?label=Follow%20Me%21&style=social"></a>
 <a href="https://github.com/brennanbrown/enjoyment-work/watchers"><img alt="GitHub watchers" src="https://img.shields.io/github/watchers/brennanbrown/enjoyment-work?label=Watch%21&style=social"></a>
