@@ -1,0 +1,107 @@
+# Site Data
+title: 
+tagline: 
+name: 
+author_bio: >
+footer_description: >
+notes_url: 
+profile_pic: 
+favicon: /assets/img/favicon.png
+baseurl: "" # the subpath of your site, e.g. /blog
+url: ""     # the base hostname & protocol for your site, e.g. https://example.com
+theme_color: white
+encoding: utf-8
+
+# Links and Social Media
+donate_link: 
+repository: 
+github: 
+twitter: 
+portfolio: 
+email: 
+
+# Build Settings
+theme: null
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-minifier
+  - jekyll-toc
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  math_engine: mathjax
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+  syntax_highlighter: rouge
+
+sass:
+  style: compressed
+
+JEKYLL_ENV: "production"
+
+collections:
+  notes:
+    output: true
+    permalink: /notes/:title
+  journals:
+    output: true
+    permalink: /journals/:title
+  pages:
+    output: true
+    permalink: /page/:name
+
+disqus:
+  shortname: 
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /posts/:title
+      content-type: post
+      category: "Post"
+      toc: true
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: post
+      content-type: notes
+  - scope:
+      path: ""
+      type: journals
+    values:
+      layout: post
+      content-type: journals
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+      content-type: pages
+
+jekyll-archives:
+  enabled: []
+  layout: default
+  permalinks:
+    year: "/:year/"
+    month: "/:year/:month/"
+    day: "/:year/:month/:day/"
+    tag: "/tag/:name/"
+    category: "/category/:name/"
+
+toc:
+  min_level: 1
+  max_level: 6
+  ordered_list: false
+  no_toc_section_class: no-toc
+  list_class: section-nav
+  sublist_class: ""
+  item_class: entry
+  item_prefix: toc-
