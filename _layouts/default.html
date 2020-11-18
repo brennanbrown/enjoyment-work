@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include head.html %}
+    <body>
+        <a class="skip-main" href="#content">Skip to main content</a>
+        <!-- MAIN CONTENT -->
+        <main class="flex-shrink-0" role="main">
+            <div class="row justify-content-center pb-3">
+                <div class="col-md-7 col-sm-12">
+                    {% include header.html %}
+                    {% include feed.html %}
+                    <div id="content">{{content}}</div>
+                </div>
+            </div>
+                <button class="scroll-to-top" id="scroll-to-top">
+                    UP <i class="fa fa-chevron-up"></i>
+                </button>
+            </div>
+        </main>
+        {% include footer.html %}
+        {% include scripts.html %}
+    </body>
+</html>

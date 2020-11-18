@@ -1,0 +1,81 @@
+{%- if page.permalink == "/posts" -%}
+    {%- for item in site.posts -%}
+        <div data-url="{{site.url}}{{item.url}}" class="mt-2">
+            <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: "%A, %B %-d, %Y" }}</time>
+            <a href="{{item.url}}">
+                <h2 class="my-2">
+                    {{ item.title }}
+                </h2>
+            </a>
+            <span>
+                {% for category in item.categories %}
+                    <strong>
+                        Type:
+                        <a href="{{category.url}}">{{ category }}</a>
+                    </strong>
+                    |
+                {% endfor %}
+                {% for tag in item.tags %}
+                    <a href="{{tag.url}}">#{{ tag }}</a>
+                {% endfor %}
+            </span>
+            <p class="text-justify m-3">{{ item.content | strip_html | strip | escape | truncate: 300 }}</p>
+        </div>
+        <hr>
+    {%- endfor -%}
+{%- endif -%}
+
+{%- if page.permalink == "/notes" -%}
+    {%- for item in site.notes -%}
+        <div data-url="{{site.url}}{{item.url}}" class="mt-2">
+            <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: "%A, %B %-d, %Y" }}</time>
+            <a href="{{item.url}}">
+                <h2 class="my-2">
+                    <i class="{{ item.icon }}"></i>
+                    {{ item.title }}
+                </h2>
+            </a>
+            <span>
+                {% for category in item.categories %}
+                    <strong>
+                        Type:
+                        <a href="{{category.url}}">{{ category }}</a>
+                    </strong>
+                    |
+                {% endfor %}
+                {% for tag in item.tags %}
+                    <a href="{{tag.url}}">#{{ tag }}</a>
+                {% endfor %}
+            </span>
+            <p class="text-justify m-3">{{ item.content | strip_html | strip | escape | truncate: 300 }}</p>
+        </div>
+        <hr>
+    {%- endfor -%}
+{%- endif -%}
+
+{%- if page.permalink == "/journals" -%}
+    {%- for item in site.journals -%}
+        <div data-url="{{site.url}}{{item.url}}" class="mt-2">
+            <a href="{{item.url}}">
+                <h2 class="my-2">
+                    <i class="{{ item.icon }}"></i>
+                    {{ item.title }}
+                </h2>
+            </a>
+            <span>
+                {% for category in item.categories %}
+                    <strong>
+                        Type:
+                        <a href="{{category.url}}">{{ category }}</a>
+                    </strong>
+                    |
+                {% endfor %}
+                {% for tag in item.tags %}
+                    <a href="{{tag.url}}">#{{ tag }}</a>
+                {% endfor %}
+            </span>
+            <p class="text-justify m-3">{{ item.content | strip_html | strip | escape | truncate: 300 }}</p>
+        </div>
+        <hr>
+    {%- endfor -%}
+{%- endif -%}
