@@ -42,40 +42,41 @@ author: false
    </div>
    <div class="col-lg-8">
 
-      <div class="text-center">
-            <h2>About Me</h2>
-            <subtitle class="font-weight-bold text-muted">
-               <span style="color: orangered;">
-                  <i class="fas fa-map-pin"></i>
-               </span> For Hire
-               <span style="color: dodgerblue;">
-                  <i class="ml-4 fas fa-map-marked-alt"></i>
-               </span> Willing to Relocate
-            </subtitle>
-      </div>
+   <div class="text-center">
+         <h2>About Me</h2>
+         <subtitle class="font-weight-bold text-muted">
+            <span style="color: orangered;">
+               <i class="fas fa-map-pin"></i>
+            </span> For Hire
+            <span style="color: dodgerblue;">
+               <i class="ml-4 fas fa-map-marked-alt"></i>
+            </span> Willing to Relocate
+         </subtitle>
+   </div>
 
-      <br />
-      <div class="text-justify mr-2">
-            <p>Hey there! My name is Brennan, I&#39;m a 24-year-old Métis web developer and content strategist from
-               Winnipeg, Manitoba and currently reside in Calgary, Alberta. I've recently compeleted a Full Stack
-               Developer Program at <a href="https://www.evolveu.ca/">EvolveU</a>, and I&#39;m looking to help
-               those
-               that need web development work done, or searching for ideas and management for their next content
-               project.
-            </p>
+   <br />
+   <div class="text-justify mr-2">
+         <p>Hey there! My name is Brennan, I&#39;m a 24-year-old Métis web developer and content strategist from
+            Winnipeg, Manitoba and currently reside in Calgary, Alberta. I've recently compeleted a Full Stack
+            Developer Program at <a href="https://www.evolveu.ca/">EvolveU</a>, and I&#39;m looking to help
+            those
+            that need web development work done, or searching for ideas and management for their next content
+            project.
+         </p>
 
-            <p>I would also love to volunteer my time to contributing to open-source projects! I love creating and
-               tinkering with small, static websites and projects. I&#39;m a big proponent of putting an emphasis
-               on
-               accessibility and the <a href="https://www.a11yproject.com/">A11y project</a> in web development.
-            </p>
+         <p>I would also love to volunteer my time to contributing to open-source projects! I love creating and
+            tinkering with small, static websites and projects. I&#39;m a big proponent of putting an emphasis
+            on
+            accessibility and the <a href="https://www.a11yproject.com/">A11y project</a> in web development.
+         </p>
 
-            <p>I&#39;m always looking to work with people that are hopeless idealists like me, as well as who are
-               interested in creating and working on cool, interesting, and meaningful projects! Shoot me <a
-                  href="mailto:mail@brennanbrown.ca">an e-mail</a> if that sounds like your cup of tea.</p>
-      </div>
+         <p>I&#39;m always looking to work with people that are hopeless idealists like me, as well as who are
+            interested in creating and working on cool, interesting, and meaningful projects! Shoot me <a
+               href="mailto:mail@brennanbrown.ca">an e-mail</a> if that sounds like your cup of tea.</p>
 
-      <br />
+   </div>
+
+   <br />
 
    </div>
 </div>

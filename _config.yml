@@ -12,11 +12,11 @@ footer_description:
   'The phrase "digital garden" is a metaphor for thinking about writing and creating that focuses less on the
   resulting "showpiece" and more on the process, care, and craft it takes to get there. While not everybody
   has or works in a dirt garden, we all share a familiarity with the idea of what a garden is.'
-notes_url: "https://enjoymentwork.netlify.app"
+notes_url: "https://enjoyment-work.netlify.app"
 profile_pic: "https://brennanbrown.ca/img/avatar.jpg"
 favicon: /assets/img/favicon.png
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://enjoymentwork.me/" # the base hostname & protocol for your site, e.g. https://example.com
+url: "https://enjoyment-work.netlify.app/" # the base hostname & protocol for your site, e.g. https://example.com
 theme_color: white
 encoding: utf-8
 
