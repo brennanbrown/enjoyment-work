@@ -1,71 +1,81 @@
 ---
 layout: post
-title: About
+title: About Enjoyment Work
 permalink: /about/
 content-type: eg
+author: false
 ---
 
-As of now, I am a programmer with expertise in System Programming (especially C++), who is also interested in Computer Graphics, Compiler Design, and Some Embedded Systems. [[Here::https://github.com/raghuveerdotnet]] is my coding scratchpad if you are interested.
+<div class="row pt-5">
+   <div class="col-lg-4">
+      <h1 class="text-center">Who I Am</h1>
+      <img class="mx-auto d-block mb-3" src="https://brennanbrown.ca/img/avatar.jpg" height="300" alt="Photo of Brennan">
+      <p class="text-center">
+            <a href="https://dev.to/brennan"><img
+                  src="https://img.shields.io/badge/-dev&#46;to-0A0A0A?style=flat&amp;labelColor=0A0A0A&amp;logo=dev.to&amp;logoColor=white&amp;link=https://dev.to/brennan"
+                  alt="Dev.to"></a>
+            <a href="https://twitter.com/brennankbrown"><img
+                  src="https://img.shields.io/badge/-Twitter-1ca0f1?style=flat&amp;labelColor=1ca0f1&amp;logo=twitter&amp;logoColor=white&amp;link=https://twitter.com/brennankbrown"
+                  alt="Twitter"></a>
+            <a href="https://linkedin.com/in/brennankbrown/"><img
+                  src="https://img.shields.io/badge/-LinkedIn-blue?style=flat&amp;logo=Linkedin&amp;logoColor=white&amp;link=https://linkedin.com/in/brennankbrown/"
+                  alt="Linkedin"></a>
+            <a href="https://medium.com/@brennanbrown"><img
+                  src="https://img.shields.io/badge/-Medium-000000?style=flat&amp;labelColor=000000&amp;logo=Medium&amp;link=https://medium.com/@brennanbrown"
+                  alt="Medium"></a>
+            <a href="https://wandernotebook.com"><img
+                  src="https://img.shields.io/badge/-Blog-21759B?style=flat&amp;logo=WordPress&amp;logoColor=white&amp;link=https://wandernotebook.com"
+                  alt="WordPress Blog"></a>
+            <a href="https://glitch.com/@brennan"><img
+                  src="https://img.shields.io/badge/-Glitch-3333FF?style=flat&amp;labelColor=3333FF&amp;logo=glitch&amp;logoColor=white&amp;link=https://glitch.com/@brennan"
+                  alt="Glitch"></a>
+            <a href="mailto:mail@brennanbrown.ca"><img
+                  src="https://img.shields.io/badge/-Email-c14438?style=flat&amp;logo=Gmail&amp;logoColor=white&amp;link=mailto:mail@brennanbrown.ca"
+                  alt="Email"></a>
+            <a href="https://ko-fi.com/brennanbrown"><img
+                  src="https://img.shields.io/badge/-Buy%20Me%20A%20Coffee-FF813F?style=flat&amp;logo=buy-me-a-coffee&amp;logoColor=ffffff&amp;link=https://ko-fi.com/brennanbrown"
+                  alt="Buy Me A Coffee"></a>
+            <img src="https://img.shields.io/badge/Pronouns-He%2FHim-brightgreen?style=flat" alt="Pronouns">
+            <img src="https://img.shields.io/badge/-Open%20Source%20Fan-3DA639?style=flat&amp;logo=open-source-initiative&amp;logoColor=ffffff"
+               alt="Open Source">
+      </p>
+   </div>
+   <div class="col-lg-8">
 
-Over the course of time, I have developed interest in many things including cognitive science, mathematics, and philosophy; and my personal penchant is to one day create a software system that I call the CogShell (Short for the  Cognitive Shell[[See my writeup on it: [here](/posts/cogshell)::rsn]]): A highly interconnnected software toolkit with all the essential tools to support thought continuity through tacit object permanance.
+      <div class="text-center">
+            <h2>About Me</h2>
+            <subtitle class="font-weight-bold text-muted">
+               <span style="color: orangered;">
+                  <i class="fas fa-map-pin"></i>
+               </span> For Hire
+               <span style="color: dodgerblue;">
+                  <i class="ml-4 fas fa-map-marked-alt"></i>
+               </span> Willing to Relocate
+            </subtitle>
+      </div>
 
+      <br />
+      <div class="text-justify mr-2">
+            <p>Hey there! My name is Brennan, I&#39;m a 24-year-old Métis web developer and content strategist from
+               Winnipeg, Manitoba and currently reside in Calgary, Alberta. I've recently compeleted a Full Stack
+               Developer Program at <a href="https://www.evolveu.ca/">EvolveU</a>, and I&#39;m looking to help
+               those
+               that need web development work done, or searching for ideas and management for their next content
+               project.
+            </p>
 
-I have a podcast by the same name called the "[[Knowledge Continuum::https://open.spotify.com/show/5zR7IUdCZAtP0m4Ef8bMgs]]".
+            <p>I would also love to volunteer my time to contributing to open-source projects! I love creating and
+               tinkering with small, static websites and projects. I&#39;m a big proponent of putting an emphasis
+               on
+               accessibility and the <a href="https://www.a11yproject.com/">A11y project</a> in web development.
+            </p>
 
----
+            <p>I&#39;m always looking to work with people that are hopeless idealists like me, as well as who are
+               interested in creating and working on cool, interesting, and meaningful projects! Shoot me <a
+                  href="mailto:mail@brennanbrown.ca">an e-mail</a> if that sounds like your cup of tea.</p>
+      </div>
 
-## Reach out to me
+      <br />
 
-[[Twitter::https://twitter.com/raghuveerdotnet]] – Shoot me a dm or just tweet ***@raghuveerdotnet***. I will try to reply as soon as I can. Sadly, I am not available on any other social media sites. I am not really into professional social media circle but anyway here is my [[linkedin::https://www.linkedin.com/in/sraghuveer/]] just in case.
-    
-Bangalore is pretty large, so I can’t promise but If you happen to be in Bangalore by chance and want to chat, drop an email([[raghu@raghuveer.net::mailto:raghu@raghuveer.net]]) and include [Coffee] in the subject line, and we can work something out.
-
-If you like anything about who I am or what I do, please do follow me or reach out to me. Don’t hesitate.
-
----
-
-## About the website
-
-[[***Changelog***<br/>
-\- 14-05-20 Context Menu <br/>
-\- 08-05-20 Trivial Spaced Repetition <br/>
-\- 04-05-20 Removed Theming. <br/>
-\- 04-05-20 Removed Curated Notes. <br/>
-\- 01-04-20 Curated Notes. <br/>
-\- 30-04-20 Transclusion. <br/>
-\- 26-04-20 Sidenote. <br/>
-\- 20-04-20 Wiki link. <br/>
-\- 16-04-20 Theme. <br/>
-\- 16-04-20 Avatar. <br/>
-\- 11-02-20 Related Posts. <br/>
-\- 12-10-19 Searchbar. <br/>
-::rmn]]Features:
-
-- **Page preview** (Move your mouse over the link): [[Test note to verify features on this website]] 
-- **Transclusion**: Allows you to see a partial view of the contents of the website to the right or the left of the margin.
-- **Sidenotes** (Changelog you see on the left is an example of this).
-- **Wiki-style link:** Usually wikis allow you to specify links using double bracket, I added it here using liquid. Also added bad-link highlighting
-   - Good link: [[Test note to verify features on this website]]
-   - Bad link: [[Title of a page that doesn't exist]]
-
-
-Some Less know features:
-
-- Go back to the blog home or to the notes page, and try to right click on any of the entry. [Hint: Zettelkasten]
-
-- Click this card[[Memorize me so that you do well in your exams::srs]] looking thing to know how I use my notes. [Hint: SRS]
-
-Other Details:
-
-- Domain is registered with Google Domains
-- The site lives on [[Github::https://github.com/raghuveerdotnet/raghuveerdotnet.github.io]].
-- This website is statically generated using Jekyll from a set of Markdown files.
-
-
-### FAQ
-
-[[**First Design**<img src="/assets/img/firstdesign.jpg"/>::lmn]]Why is the website structured the way it is?
-
-{:.boxit}
-> The design of the website is inspired by multiple sources with the intention of making the website more functional. Having said that, I am not a skilled front-end developer/UI-developer, so I could only come somewhat closer to my inital design that I sketched *(see left or click on this &#8853; icon beside the question above if you are on a mobile device)*, hopefully this will clear why it's structured the way it is. In fact, I had to remove the lab option because of my current inability to design it. That said, I can also safely say that I am improving based on the initial iterations of the website that can be seen here: [[Jan-22-2020::https://web.archive.org/web/20200122164405/raghuveer.net]], [[Apr-13-2020::https://web.archive.org/web/20200413193808/raghuveer.net]], [[Apr-20-2020::https://web.archive.org/web/20200420172058/raghuveer.net]]
-
+   </div>
+</div>
