@@ -51,8 +51,8 @@ If you like the idea of being able to use Jekyll as a free alternative to Roam R
 
 In addition, I have created two other free Jekyll themes that you might be interested in:
 
-- :potable_water: [**Watery**](https://github.com/brennanbrown/watery): A minimalist, bare-bones theme for Jekyll only using the Water.css framework while still following the best practices for accessibility and search-engine optimization. 
-- :notebook_with_decorative_cover: [**Purelog**](https://github.com/brennanbrown/purelog): A responsive sidebar Jekyll theme using the Pure.css framework, designed for writers and bloggers of all kinds. 
+- :potable_water: [**Watery**](https://github.com/brennanbrown/watery): A minimalist, bare-bones theme for Jekyll only using the Water.css framework while still following the best practices for accessibility and search-engine optimization.
+- :notebook_with_decorative_cover: [**Purelog**](https://github.com/brennanbrown/purelog): A responsive sidebar Jekyll theme using the Pure.css framework, designed for writers and bloggers of all kinds.
 
 ![Enjoyment-Work Screen Shot](/assets/img/end_result.jpg)
 
@@ -61,7 +61,7 @@ In addition, I have created two other free Jekyll themes that you might be inter
 Here are a few interesting features of this Jekyll theme:
 
 - A fully customizable and empty `_BLANK_config.yml` to make getting up-and-running easy.
-- A speedy, on-site search function using [Simply Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search).
+- A speedy, on-site search function using [Enjoyment work Search](https://github.com/christian-fei/Simple-Jekyll-Search).
 - Custom collections for different types of material (note-taking, journal writing, etc.)
 - An auto-generating `/archive` page that displays all entries from _all_ collections.
 - Auto-generating `/tags` and `/categories` pages.
@@ -194,8 +194,6 @@ While creating this theme, I came across a lot of helpful and hard-to-find resou
 
 ## Credit
 
-[**Simply Jekyll**](https://github.com/raghuveerdotnet/simply-jekyll) was created by [Raghuveer S.](https://github.com/raghuveerdotnet).
+[**Enjoyment work**](https://github.com/raghuveerdotnet/simply-jekyll) was created by [Raghuveer S.](https://github.com/raghuveerdotnet).
 
 [**Simple Jekyll Search**](https://github.com/christian-fei/Simple-Jekyll-Search) was created by [Christian Fei](https://github.com/christian-fei).
-
-

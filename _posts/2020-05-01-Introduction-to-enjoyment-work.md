@@ -1,9 +1,9 @@
 ---
-title: Introduction to Simply Jekyll
+title: Introduction to Enjoyment work
 tags: jekyll theme
 ---
 
-Simply Jekyll is a highly functional jekyll-based theme that combines the best of different worlds (atleast tries to 😅). It is a minimal and distraction free theme that strives to provide maximum value all without holding back on any essential features that a user would benefit from or would desire for. This is an evolving project and is garanteed to be maintained at least for quite some time as I myself am a beneficiary of this theme and the project.
+Enjoyment work is a highly functional jekyll-based theme that combines the best of different worlds (atleast tries to 😅). It is a minimal and distraction free theme that strives to provide maximum value all without holding back on any essential features that a user would benefit from or would desire for. This is an evolving project and is garanteed to be maintained at least for quite some time as I myself am a beneficiary of this theme and the project.
 
 The theme provides a rich set of features that include:
 

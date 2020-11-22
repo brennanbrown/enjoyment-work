@@ -7,7 +7,7 @@ Quite a red-letter day for my neighbours south of the border. I would be lying i
 
 First off, my apologies for this post not being very Beeminder-specific, I've been getting dedicated with my development work with Jekyll the past week. So I haven't really given the time needed to examine how my Beeminder goals have been affecting things in my life, like I usually (neurotically) do. I'm planning to do a full review of my now 24(!) systems.
 
-Some bad news and good news: The bad news is that I definitely bit off more than I can chew with trying to modify Simply Jekyll. It already had a 1,300 line CSS file, and I decided it would be a good idea to add Bootstrap on top of that, and although I love how it looks and what it's capable of, it's hopelessly bloated.
+Some bad news and good news: The bad news is that I definitely bit off more than I can chew with trying to modify Enjoyment work. It already had a 1,300 line CSS file, and I decided it would be a good idea to add Bootstrap on top of that, and although I love how it looks and what it's capable of, it's hopelessly bloated.
 
 The good news is that I successfully completed [**Hacktoberfest**](https://hacktoberfest.digitalocean.com/) for the first time! But even better, I went back to the drawing board and created my first open-source project for others: [**Watery**](https://github.com/brennanbrown/watery), which is the most minimal yet functional Jekyll theme I could create. I went down the rabbit hole of [classless CSS frameworks](https://github.com/dbohdan/classless-css) and used the most popular one, Water.css, for this.
 

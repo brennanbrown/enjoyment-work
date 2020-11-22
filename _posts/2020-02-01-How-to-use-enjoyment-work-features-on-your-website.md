@@ -1,10 +1,10 @@
 ---
-title: How to use Simply Jekyll features on your website
+title: How to use Enjoyment work features on your website
 tags: jekyll theme
 comments: true
 ---
 
-Welcome to this feature usage tour. This is going to be another short post that describes how to use all the fancy features we saw in [[Exploring the features of Simply Jekyll]]. So without further ado, let's get started.
+Welcome to this feature usage tour. This is going to be another short post that describes how to use all the fancy features we saw in [[Exploring the features of Enjoyment work]]. So without further ado, let's get started.
 
 ## The default features
 
@@ -181,4 +181,4 @@ Features like backlinks, context menu, related posts, page preview are available
 
 When you typeout square brackets, it can be frustrating to type out the entire file title everytime. At least it was for me, so I created a small VSCode plugin, the editor in which I write my essays to autocomplete the titles as soon as I type double squarebrackets. It has been pretty handy for me, if you are interested in using VSCode or already use it, you can find it here: [[Notecomplete::https://github.com/raghuveerdotnet/scratchpad/tree/master/note-complete]]. It is pretty simple to use, all you have to do is just download the note-complete folder and copy it to .vscode directory in your OS to start using it. :)
 
-For setting up the theme on your website checkout [[How to setup Simply Jekyll]]
+For setting up the theme on your website checkout [[How to setup Enjoyment work]]

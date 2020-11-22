@@ -1,5 +1,5 @@
 ---
-title: How-To Setup Simply Jekyll
+title: How-To Setup Enjoyment work
 tags: jekyll theme
 categories: test
 comments: true
@@ -78,7 +78,7 @@ $ bundle exec jekyll serve
 
 Then, open up [[https://localhost:4000::https://localhost:4000]] in your browser.
 
-If everything’s done correctly, you should now see the home page of your Personal Jekyll Website with Simply Jekyll Theme. 🎉
+If everything’s done correctly, you should now see the home page of your Personal Jekyll Website with Enjoyment work Theme. 🎉
 
 Keep in mind that this site is only available locally (notice the `localhost` part of the URL), so if we want it to be available on the Internet for everyone to enjoy, we need to deploy it to the Internet: we’ll use Netlify for that in the next step.
 
@@ -103,7 +103,7 @@ Once that’s done, your website should be available on the Internet via a gener
 
 Now the cool thing is this: whenever you push an update to your GitHub repository, Netlify will automatically deploy your updates to the Internet.
 
-### 5. Start producing content with your Simply Jekyll based Website
+### 5. Start producing content with your Enjoyment work based Website
 
 At this point, you can start updating the files on your machine (in the my-personal-website folder) to change your jekyll seamless based website to your liking: update the copy, add some notes, tweak the layout, customize the colors, etc. Once you have something you’re happy with, push your changes to your GitHub repository with the following commands:
 
@@ -115,7 +115,7 @@ $ git push origin master
 
 If that command succeeds and the rest of the tutorial was done correctly, in a couple of minutes, you should see your changes live on your Netlify website. 🚀
 
-And we’re done! You now have your own Simply Jekyll based Personal Website .
+And we’re done! You now have your own Enjoyment work based Personal Website .
 
 ---
 

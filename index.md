@@ -18,9 +18,9 @@ In essence, this is the dream website that I've always wanted to make since I be
 
 For more examples and information, please visit the following articles:
 
-1. **[[Exploring the features of Simply Jekyll]]**
+1. **[[Exploring the features of Enjoyment work]]**
 2. **[[Example Page to View Markdown Rendering]]**
-3. **[[How-To Setup Simply Jekyll]]**
+3. **[[How-To Setup Enjoyment work]]**
 
 ## About {{site.title}}
 
@@ -84,7 +84,7 @@ Hence why you do not keep orphan notes: Every time you write a new note, make su
 
 ## Attribution
 
-This project is built on [**Simply Jekyll**](https://github.com/raghuveerdotnet/simply-jekyll) by [Raghuveer S.](https://github.com/raghuveerdotnet) a simple yet highly functional jekyll-based theme that combines the best of different worlds. It is a minimal and distraction free theme that strives to provide maximum value all without holding back on any essential features that a user would benefit from or would desire for.
+This project is built on [**Enjoyment work**](https://github.com/raghuveerdotnet/simply-jekyll) by [Raghuveer S.](https://github.com/raghuveerdotnet) a simple yet highly functional jekyll-based theme that combines the best of different worlds. It is a minimal and distraction free theme that strives to provide maximum value all without holding back on any essential features that a user would benefit from or would desire for.
 
 ### Features
 
