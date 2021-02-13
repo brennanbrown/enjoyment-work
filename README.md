@@ -194,6 +194,6 @@ While creating this theme, I came across a lot of helpful and hard-to-find resou
 
 ## Credit
 
-[**Enjoyment work**](https://github.com/raghuveerdotnet/simply-jekyll) was created by [Raghuveer S.](https://github.com/raghuveerdotnet).
+[**Simply Jekyll**](https://github.com/raghuveerdotnet/simply-jekyll) was created by [Raghuveer S.](https://github.com/raghuveerdotnet).
 
 [**Simple Jekyll Search**](https://github.com/christian-fei/Simple-Jekyll-Search) was created by [Christian Fei](https://github.com/christian-fei).
