@@ -1,3 +1,5 @@
+"use strict";
+
 (function () {
 
   "use strict";
@@ -30,16 +32,14 @@
       posX = e.pageX;
       posY = e.pageY;
     } else if (e.clientX || e.clientY) {
-      posX = e.clientX + document.body.scrollLeft +
-        document.documentElement.scrollLeft;
-      posY = e.clientY + document.body.srollTop +
-        document.documentElement.scrollTop;
+      posX = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+      posY = e.clientY + document.body.srollTop + document.documentElement.scrollTop;
     }
 
     return {
       x: posX,
       y: posY
-    }
+    };
   }
 
   /* Variables related to main context menu */
@@ -50,10 +50,8 @@
 
   /* Variables related to context menu results */
   var contextMenuResActive = "context-menu-res--active";
-  var contextMenuResClassName = "context-menu-res"
+  var contextMenuResClassName = "context-menu-res";
   var contextMenuResLinkClassName = "context-menu-res__link";
-
-
 
   var feedItemClassName = "feed-title-excerpt-block";
   var feedItemInContext;
@@ -90,12 +88,11 @@
     windowWidth = window.innerWidth;
     windowHeight = window.innerHeight;
 
-    if ((windowWidth - clickCoordsX) < menuWidth) {
+    if (windowWidth - clickCoordsX < menuWidth) {
       menu.style.left = windowWidth - menuWidth + "px";
     } else {
       menu.style.left = clickCoordsX + "px";
     }
-
 
     menu.style.top = clickCoordsY + "px";
   }
@@ -108,17 +105,14 @@
     windowWidth = window.innerWidth;
     windowHeight = window.innerHeight;
 
-    if ((windowWidth - clickCoordsX) < resMenuWidth) {
+    if (windowWidth - clickCoordsX < resMenuWidth) {
       resMenu.style.left = windowWidth - resMenuWidth + "px";
     } else {
       resMenu.style.left = clickCoordsX + "px";
     }
 
     resMenu.style.top = clickCoordsY + "px";
-
   }
-
-
 
   function init() {
     contextListener();
@@ -135,70 +129,80 @@
     };
   }
 
+  function getRelatedHTML(dataUrl) {
+    var response, responseText;
+    return regeneratorRuntime.async(function getRelatedHTML$(context$2$0) {
+      while (1) switch (context$2$0.prev = context$2$0.next) {
+        case 0:
+          context$2$0.next = 2;
+          return regeneratorRuntime.awrap(fetch(dataUrl));
 
-  async function getRelatedHTML(dataUrl) {
-    let response = await fetch(dataUrl);
-    let responseText = response.text();
-    return responseText;
+        case 2:
+          response = context$2$0.sent;
+          responseText = response.text();
+          return context$2$0.abrupt("return", responseText);
+
+        case 5:
+        case "end":
+          return context$2$0.stop();
+      }
+    }, null, this);
   }
 
-
   function showRelated(dataAction, dataUrl) {
-    getRelatedHTML(dataUrl)
-      .then(function (responseText) {
-        let parser = new DOMParser();
-        let doc = parser.parseFromString(responseText, "text/html");
-        var relatedItems;
-        var contextMenuResTitle;
-        if (dataAction == "backlinks") {
-          relatedItems = doc.getElementById("jekyll-seamless-backlinks");
-          contextMenuResTitle = document.createTextNode("Linked References");
-        } else {
-          relatedItems = doc.getElementById("jekyll-seamless-relatedposts");
-          contextMenuResTitle = document.createTextNode("Related by Tag");
+    getRelatedHTML(dataUrl).then(function (responseText) {
+      var parser = new DOMParser();
+      var doc = parser.parseFromString(responseText, "text/html");
+      var relatedItems;
+      var contextMenuResTitle;
+      if (dataAction == "backlinks") {
+        relatedItems = doc.getElementById("jekyll-seamless-backlinks");
+        contextMenuResTitle = document.createTextNode("Linked References");
+      } else {
+        relatedItems = doc.getElementById("jekyll-seamless-relatedposts");
+        contextMenuResTitle = document.createTextNode("Related by Tag");
+      }
+      var relatedItemHTMLTitle = document.createElement("p");
+      relatedItemHTMLTitle.setAttribute("class", "feed-relatedItems");
+      relatedItemHTMLTitle.style.fontSize = "14px";
+      relatedItemHTMLTitle.style.color = "#777";
+      relatedItemHTMLTitle.style.fontWeight = "600";
+      relatedItemHTMLTitle.style.fontFamily = "Inter";
+      var relatedItemHTML = document.createElement("ul");
+
+      if (relatedItems == null) {
+        contextMenuResTitle = document.createTextNode("Nothing Found ");
+        relatedItemHTMLTitle.appendChild(contextMenuResTitle);
+      } else {
+        var urls = relatedItems.getElementsByTagName("a");
+        var titles = relatedItems.querySelectorAll(".related-title");
+        relatedItemHTMLTitle.appendChild(contextMenuResTitle);
+        for (var i = 0; i < urls.length; i++) {
+          var newLink = document.createElement("li");
+          newLink.style.listStyle = "none";
+
+          var newAnchor = document.createElement("a");
+          newAnchor.setAttribute("href", urls[i].getAttribute("href"));
+          newAnchor.setAttribute("class", contextMenuResLinkClassName);
+          newAnchor.appendChild(document.createTextNode(titles[i].innerHTML));
+          newAnchor.style.textDecoration = "none";
+          newAnchor.style.fontSize = "12px";
+          newAnchor.style.color = "#4183c4";
+
+          newLink.appendChild(newAnchor);
+
+          relatedItemHTML.appendChild(newLink);
         }
-        var relatedItemHTMLTitle = document.createElement("p");
-        relatedItemHTMLTitle.setAttribute("class", "feed-relatedItems");
-        relatedItemHTMLTitle.style.fontSize = "14px";
-        relatedItemHTMLTitle.style.color = "#777";
-        relatedItemHTMLTitle.style.fontWeight = "600";
-        relatedItemHTMLTitle.style.fontFamily = "Inter";
-        var relatedItemHTML = document.createElement("ul");
-
-        if (relatedItems == null) {
-          contextMenuResTitle = document.createTextNode("Nothing Found ");
-          relatedItemHTMLTitle.appendChild(contextMenuResTitle);
-        } else {
-          var urls = relatedItems.getElementsByTagName("a");
-          var titles = relatedItems.querySelectorAll(".related-title");
-          relatedItemHTMLTitle.appendChild(contextMenuResTitle);
-          for (var i = 0; i < urls.length; i++) {
-            var newLink = document.createElement("li");
-            newLink.style.listStyle = "none";
-
-            var newAnchor = document.createElement("a");
-            newAnchor.setAttribute("href", urls[i].getAttribute("href"));
-            newAnchor.setAttribute("class", contextMenuResLinkClassName);
-            newAnchor.appendChild(document.createTextNode(titles[i].innerHTML));
-            newAnchor.style.textDecoration = "none";
-            newAnchor.style.fontSize = "12px";
-            newAnchor.style.color = "#4183c4";
-
-            newLink.appendChild(newAnchor);
-
-            relatedItemHTML.appendChild(newLink);
-          }
-        }
-        relatedItemHTML.prepend(relatedItemHTMLTitle);
-        relatedItemHTML.style.marginLeft = "-20px";
-        relatedItemHTML.style.paddingRight = "10px";
-        toggleContextResMenuOn();
-        resMenu.appendChild(relatedItemHTML);
-        positionContextMenuRes();
-      }).catch(function (err) {
-        console.warn("Oops, something went wrong.", err);
-      });
-
+      }
+      relatedItemHTML.prepend(relatedItemHTMLTitle);
+      relatedItemHTML.style.marginLeft = "-20px";
+      relatedItemHTML.style.paddingRight = "10px";
+      toggleContextResMenuOn();
+      resMenu.appendChild(relatedItemHTML);
+      positionContextMenuRes();
+    })["catch"](function (err) {
+      console.warn("Oops, something went wrong.", err);
+    });
   }
 
   /* No More Ajaxing
@@ -219,14 +223,12 @@
                   relatedItems = doc.getElementById("relatedposts");
                   contextMenuResTitle = document.createTextNode("Related by Tag");
               }
-
               var relatedItemHTMLTitle = document.createElement("p");
               relatedItemHTMLTitle.setAttribute("class", "feed-relatedItems");
               relatedItemHTMLTitle.style.fontSize = "14px";
               relatedItemHTMLTitle.style.color = "#777";
               relatedItemHTMLTitle.style.fontWeight = "600";
               var relatedItemHTML = document.createElement("ul");
-
               if (relatedItems == null) {
                   contextMenuResTitle = document.createTextNode("Nothing Found ");
                   relatedItemHTMLTitle.appendChild(contextMenuResTitle);
@@ -291,7 +293,6 @@
     toggleMenuOff();
   }
 
-
   function contextListener() {
     document.addEventListener("contextmenu", function (e) {
       feedItemInContext = clickInsideElement(e, feedItemClassName);
@@ -342,7 +343,7 @@
       if (e.keyCode === 27) {
         toggleMenuOff();
       }
-    }
+    };
   }
 
   function toggleMenuOn() {
@@ -379,7 +380,5 @@
     }
   }
 
-
   init();
-
 })();
