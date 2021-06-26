@@ -1,7 +1,6 @@
 "use strict";
 
 (function () {
-
   "use strict";
 
   /* Helper function to check if the click event happened 
@@ -11,7 +10,7 @@
     if (el.classList.contains(className)) {
       return el;
     } else {
-      while (el = el.parentNode) {
+      while ((el = el.parentNode)) {
         if (el.classList && el.classList.contains(className)) {
           return el;
         }
@@ -32,13 +31,17 @@
       posX = e.pageX;
       posY = e.pageY;
     } else if (e.clientX || e.clientY) {
-      posX = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
-      posY = e.clientY + document.body.srollTop + document.documentElement.scrollTop;
+      posX =
+        e.clientX +
+        document.body.scrollLeft +
+        document.documentElement.scrollLeft;
+      posY =
+        e.clientY + document.body.srollTop + document.documentElement.scrollTop;
     }
 
     return {
       x: posX,
-      y: posY
+      y: posY,
     };
   }
 
@@ -98,7 +101,6 @@
   }
 
   function positionContextMenuRes() {
-
     resMenuWidth = resMenu.offsetWidth + 10;
     resMenuHeight = resMenu.offsetHeight + 10;
 
@@ -131,78 +133,85 @@
 
   function getRelatedHTML(dataUrl) {
     var response, responseText;
-    return regeneratorRuntime.async(function getRelatedHTML$(context$2$0) {
-      while (1) switch (context$2$0.prev = context$2$0.next) {
-        case 0:
-          context$2$0.next = 2;
-          return regeneratorRuntime.awrap(fetch(dataUrl));
+    return regeneratorRuntime.async(
+      function getRelatedHTML$(context$2$0) {
+        while (1)
+          switch ((context$2$0.prev = context$2$0.next)) {
+            case 0:
+              context$2$0.next = 2;
+              return regeneratorRuntime.awrap(fetch(dataUrl));
 
-        case 2:
-          response = context$2$0.sent;
-          responseText = response.text();
-          return context$2$0.abrupt("return", responseText);
+            case 2:
+              response = context$2$0.sent;
+              responseText = response.text();
+              return context$2$0.abrupt("return", responseText);
 
-        case 5:
-        case "end":
-          return context$2$0.stop();
-      }
-    }, null, this);
+            case 5:
+            case "end":
+              return context$2$0.stop();
+          }
+      },
+      null,
+      this
+    );
   }
 
   function showRelated(dataAction, dataUrl) {
-    getRelatedHTML(dataUrl).then(function (responseText) {
-      var parser = new DOMParser();
-      var doc = parser.parseFromString(responseText, "text/html");
-      var relatedItems;
-      var contextMenuResTitle;
-      if (dataAction == "backlinks") {
-        relatedItems = doc.getElementById("jekyll-seamless-backlinks");
-        contextMenuResTitle = document.createTextNode("Linked References");
-      } else {
-        relatedItems = doc.getElementById("jekyll-seamless-relatedposts");
-        contextMenuResTitle = document.createTextNode("Related by Tag");
-      }
-      var relatedItemHTMLTitle = document.createElement("p");
-      relatedItemHTMLTitle.setAttribute("class", "feed-relatedItems");
-      relatedItemHTMLTitle.style.fontSize = "14px";
-      relatedItemHTMLTitle.style.color = "#777";
-      relatedItemHTMLTitle.style.fontWeight = "600";
-      relatedItemHTMLTitle.style.fontFamily = "Inter";
-      var relatedItemHTML = document.createElement("ul");
-
-      if (relatedItems == null) {
-        contextMenuResTitle = document.createTextNode("Nothing Found ");
-        relatedItemHTMLTitle.appendChild(contextMenuResTitle);
-      } else {
-        var urls = relatedItems.getElementsByTagName("a");
-        var titles = relatedItems.querySelectorAll(".related-title");
-        relatedItemHTMLTitle.appendChild(contextMenuResTitle);
-        for (var i = 0; i < urls.length; i++) {
-          var newLink = document.createElement("li");
-          newLink.style.listStyle = "none";
-
-          var newAnchor = document.createElement("a");
-          newAnchor.setAttribute("href", urls[i].getAttribute("href"));
-          newAnchor.setAttribute("class", contextMenuResLinkClassName);
-          newAnchor.appendChild(document.createTextNode(titles[i].innerHTML));
-          newAnchor.style.textDecoration = "none";
-          newAnchor.style.fontSize = "12px";
-          newAnchor.style.color = "#4183c4";
-
-          newLink.appendChild(newAnchor);
-
-          relatedItemHTML.appendChild(newLink);
+    getRelatedHTML(dataUrl)
+      .then(function (responseText) {
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(responseText, "text/html");
+        var relatedItems;
+        var contextMenuResTitle;
+        if (dataAction == "backlinks") {
+          relatedItems = doc.getElementById("jekyll-seamless-backlinks");
+          contextMenuResTitle = document.createTextNode("Linked References");
+        } else {
+          relatedItems = doc.getElementById("jekyll-seamless-relatedposts");
+          contextMenuResTitle = document.createTextNode("Related by Tag");
         }
-      }
-      relatedItemHTML.prepend(relatedItemHTMLTitle);
-      relatedItemHTML.style.marginLeft = "-20px";
-      relatedItemHTML.style.paddingRight = "10px";
-      toggleContextResMenuOn();
-      resMenu.appendChild(relatedItemHTML);
-      positionContextMenuRes();
-    })["catch"](function (err) {
-      console.warn("Oops, something went wrong.", err);
-    });
+        var relatedItemHTMLTitle = document.createElement("p");
+        relatedItemHTMLTitle.setAttribute("class", "feed-relatedItems");
+        relatedItemHTMLTitle.style.fontSize = "14px";
+        relatedItemHTMLTitle.style.color = "#777";
+        relatedItemHTMLTitle.style.fontWeight = "600";
+        relatedItemHTMLTitle.style.fontFamily = "Inter";
+        var relatedItemHTML = document.createElement("ul");
+
+        if (relatedItems == null) {
+          contextMenuResTitle = document.createTextNode("Nothing Found ");
+          relatedItemHTMLTitle.appendChild(contextMenuResTitle);
+        } else {
+          var urls = relatedItems.getElementsByTagName("a");
+          var titles = relatedItems.querySelectorAll(".related-title");
+          relatedItemHTMLTitle.appendChild(contextMenuResTitle);
+          for (var i = 0; i < urls.length; i++) {
+            var newLink = document.createElement("li");
+            newLink.style.listStyle = "none";
+
+            var newAnchor = document.createElement("a");
+            newAnchor.setAttribute("href", urls[i].getAttribute("href"));
+            newAnchor.setAttribute("class", contextMenuResLinkClassName);
+            newAnchor.appendChild(document.createTextNode(titles[i].innerHTML));
+            newAnchor.style.textDecoration = "none";
+            newAnchor.style.fontSize = "12px";
+            newAnchor.style.color = "#4183c4";
+
+            newLink.appendChild(newAnchor);
+
+            relatedItemHTML.appendChild(newLink);
+          }
+        }
+        relatedItemHTML.prepend(relatedItemHTMLTitle);
+        relatedItemHTML.style.marginLeft = "-20px";
+        relatedItemHTML.style.paddingRight = "10px";
+        toggleContextResMenuOn();
+        resMenu.appendChild(relatedItemHTML);
+        positionContextMenuRes();
+      })
+      ["catch"](function (err) {
+        console.warn("Oops, something went wrong.", err);
+      });
   }
 
   /* No More Ajaxing
@@ -275,14 +284,14 @@
     var dataUrl = feedItemInContext.getAttribute("data-url");
     var dataAction = link.getAttribute("data-action");
     switch (dataAction) {
-      case 'backlinks':
+      case "backlinks":
         showRelated(dataAction, dataUrl);
         break;
-      case 'related-posts':
+      case "related-posts":
         showRelated(dataAction, dataUrl);
         break;
-      case 'new-tab':
-        window.open(dataUrl, '_blank');
+      case "new-tab":
+        window.open(dataUrl, "_blank");
         break;
       default:
         break;
