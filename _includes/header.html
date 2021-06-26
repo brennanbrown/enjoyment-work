@@ -13,11 +13,11 @@
         <div class="userboard profile-board-col">
             <div class="username">
                 <span>
-                    <a href="/about"">{{site.name}}</a>
+                    <a " href="/about">{{site.name}}</a>
                 </span>
             </div>
             <div class=" userdesc">
-                        <p>{{site.description}}</p>
+                <p>{{site.description}}</p>
             </div>
             <div class="link-to-notes text-right">
                 <i class="fas fa-link"></i>
@@ -27,37 +27,37 @@
     </div>
     <div class="main-site-subheader menu disable-select text-center">
         <div class="about">
-            <a href="/about"">
+            <a " href="/about">
                 <i class=" fas fa-signature"></i>
                 About
             </a>
         </div>
         <div class="hashtags">
-            <a href="/tags"">
+            <a " href="/tags">
                 <i class=" fas fa-hashtag"></i>
                 Tags
             </a>
         </div>
         <div class="categories">
-            <a href="/categories"">
+            <a " href="/categories">
                 <i class=" far fa-folder-open"></i>
                 Categories
             </a>
         </div>
         <div class="archive">
-            <a href="/archive"">
+            <a " href="/archive">
                 <i class=" fas fa-archive"></i>
                 Archive
             </a>
         </div>
         <div class="rss">
-            <a href="/feed.xml"">
+            <a " href="/feed.xml">
                 <i class=" fas fa-rss"></i>
                 RSS
             </a>
         </div>
         <div class="donate">
-            <a href="{{ site.donate_link }}"">
+            <a href="{{ site.donate_link }}" ">
                 <i class=" fas fa-dollar-sign"></i>
                 Donate
             </a>
@@ -65,8 +65,7 @@
     </div>
     <div class="searchbar search-container sans">
         <i aria-hidden="true" class="fa fa-search"></i>
-        <input autocomplete="off" id="search-input" oninput="changeResultContainerDisp(this.value)"
-            placeholder="Search Enjoyment Work..." type="text" />
+        <input autocomplete="off" id="search-input" oninput="changeResultContainerDisp(this.value)" placeholder="Search Enjoyment Work..." type="text"/>
         <label for="search-input"></label>
         <ul id="results-container"></ul>
     </div>
@@ -99,6 +98,6 @@
         })
     </script>
     {%- if page.permalink != "/" -%}
-    {% include breadcrumbs.html %}
+        {% include breadcrumbs.html %}
     {%- endif -%}
 </header>
