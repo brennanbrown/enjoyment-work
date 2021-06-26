@@ -20,7 +20,7 @@ content-type: eg
 <main>
     {% for category in site.categories %}
         <h3 id="{{ category | first }}">{{ category | first | capitalize }}</h3>
-        {% for post in category.last %} 
+        {% for post in category.last %}
             <li id="category-content" style="padding-bottom: 0.6em; list-style: none;"><a href="{{post.url}}">{{ post.title }}</a></li>
         {% endfor %}
     {% endfor %}

@@ -2,8 +2,10 @@
 layout: page
 permalink: /archive
 ---
+
 {% for collection in site.collections %}
-  {% if collection.label != "pages" %}
+{% if collection.label != "pages" %}
+
   <h2>Items from {{ collection.label }}</h2>
   <ul>
     {% for item in site[collection.label] %}
