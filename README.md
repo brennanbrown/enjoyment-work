@@ -49,10 +49,11 @@ There are several other planned features in the [Roadmap](#roadmap) ahead, as th
 
 If you like the idea of being able to use Jekyll as a free alternative to Roam Research, Notion, etc. then please feel free to [**use this template**](https://github.com/brennanbrown/enjoyment-work/generate), or even better, contribute to this project by [submitting a pull request](https://github.com/brennanbrown/enjoyment-work/pulls) or [creating an issue](https://github.com/brennanbrown/enjoyment-work/issues)! First-time contributors are definitely welcomed!
 
-In addition, I have created two other free Jekyll themes that you might be interested in:
+In addition, I have created three other free Jekyll themes that you might be interested in:
 
 - :potable_water: [**Watery**](https://github.com/brennanbrown/watery): A minimalist, bare-bones theme for Jekyll only using the Water.css framework while still following the best practices for accessibility and search-engine optimization.
 - :notebook_with_decorative_cover: [**Purelog**](https://github.com/brennanbrown/purelog): A responsive sidebar Jekyll theme using the Pure.css framework, designed for writers and bloggers of all kinds.
+- [**Classic Spirits**](https://github.com/brennanbrown/classic-spirit): A classic sidebar Jekyll theme for old-school blogging, created with the Bulma framework. Built on Soot Spirits by Abhishek Nagekar.
 
 ![Enjoyment-Work Screen Shot](/assets/img/end_result.jpg)
 
