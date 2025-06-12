@@ -6,7 +6,7 @@
   /* Helper function to check if the click event happened 
      inside the specfied css element or outside */
   function clickInsideElement(e, className) {
-    var el = e.srsElement || e.target;
+    var el = e.srcElement || e.target;
     if (el.classList.contains(className)) {
       return el;
     } else {
@@ -36,7 +36,7 @@
         document.body.scrollLeft +
         document.documentElement.scrollLeft;
       posY =
-        e.clientY + document.body.srollTop + document.documentElement.scrollTop;
+        e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
     }
 
     return {
