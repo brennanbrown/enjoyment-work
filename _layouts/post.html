@@ -9,3 +9,32 @@ layout: default
     {%- include backlinks.html -%}
     {%- include related.html -%}
 </article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "url": {{ site.url | append: page.url | jsonify }},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ site.url | append: page.url | jsonify }}
+  },
+  "author": {
+    "@type": "Person",
+    "name": {{ site.name | jsonify }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.title | jsonify }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ site.favicon | jsonify }}
+    }
+  },
+  "description": {{ page.excerpt | default: site.description | strip_html | strip_newlines | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }}{% if page.image %},
+  "image": {{ page.image | jsonify }}{% endif %}
+}
+</script>
