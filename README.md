@@ -23,7 +23,9 @@
 
 <!-- BADGES -->
 <p align="center">
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/brennanbrown/enjoyment-work"><img alt="Deploy to Netlify" src="https://www.netlify.com/img/deploy/button.svg"></a>
 <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/3cc0e6e6-1ec8-4af8-ad0e-aced073231c4/deploy-status">
+<a href="https://github.com/brennanbrown/enjoyment-work/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/brennanbrown/enjoyment-work/actions/workflows/ci.yml/badge.svg"></a>
 <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/brennanbrown/enjoyment-work"> 
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/brennanbrown/enjoyment-work"> 
 <a href="https://github.com/brennanbrown/enjoyment-work/search?l=html"><img alt="GitHub top language" src="https://img.shields.io/github/languages/top/brennanbrown/enjoyment-work"></a>
@@ -36,6 +38,8 @@
 <a href="https://github.com/brennanbrown/enjoyment-work/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/brennanbrown/enjoyment-work?label=Star%21&style=social"> </a>
 <a href="https://github.com/brennanbrown/enjoyment-work/network/members"><img alt="GitHub forks"src="https://img.shields.io/github/forks/brennanbrown/enjoyment-work?label=Fork%21&style=social"></a>
 </p>
+
+> Note: A new update was released in 2025. See the detailed changes in the [Changelog](./CHANGELOG.md).
 
 <!-- ABOUT THE PROJECT -->
 
@@ -129,6 +133,10 @@ If you encounter any errors during this process, check that you have installed a
 
 If you still have issues, see [Troubleshooting](https://jekyllrb.com/docs/troubleshooting/#configuration-problems).
 
+### Continuous Integration
+
+This repo includes a GitHub Actions workflow (`.github/workflows/ci.yml`) that builds the site and runs HTMLProofer checks on PRs and pushes. Ensure you run `bundle install` locally after pulling to install the `html-proofer` gem.
+
 ## Getting Started
 
 Once you have Jekyll up-and-running, there are only a few steps needed to make this theme your own:
@@ -145,15 +153,15 @@ Once you have Jekyll up-and-running, there are only a few steps needed to make t
 
 There are several features that I'm still planning to create and integrate, including:
 
-- Optimize and minify the stylesheets and design.
-- Configure to work with Obsidian out-of-the-box.
-- Create a [Theme Gem](https://jekyllrb.com/docs/themes/#publishing-your-theme)
-- Add easy and automatic buttons to ["Deploy to Netlify"](https://docs.netlify.com/site-deploys/create-deploys/#deploy-to-netlify-button), Heroku, etc.
-- Add Travis continious integration checks
-- Add additional documentation for creating custom collections and auto generated pages
-- Add more example posts and articles
+- Optimize and minify stylesheets and design. (SCSS pipeline added; continue trimming legacy CSS, consider reducing Bootstrap.)
+- Configure to work with Obsidian out-of-the-box. (Wikilinks supported; add image/file embeds and edge cases.)
+- Create a [Theme Gem](https://jekyllrb.com/docs/themes/#publishing-your-theme).
+- "Deploy to Netlify" button. (Done.)
+- Continuous integration with GitHub Actions + HTMLProofer. (Done.)
+- Additional documentation for custom collections and auto-generated pages.
+- More example posts and articles.
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/brennanbrown/enjoyment-work/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
