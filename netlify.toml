@@ -10,12 +10,44 @@
   # the build. This is relative to the base directory if one has been set, or the
   # root directory if a base has not been set. This sample publishes the
   # directory located at the absolute path "root/project/build-output"
-  publish = "/_site"
+  publish = "_site"
 
   # Default build command.
-  command = "jekyll build"
+  command = "bundle exec jekyll build"
 
   # Directory with the serverless functions, including background functions,
   # to deploy to AWS. This is relative to the base directory if one has been set, 
   # or the root directory if a base has not been set.
   # functions = "functions/"
+
+[build.environment]
+  RUBY_VERSION = "3.2.2"
+  JEKYLL_ENV = "production"
+
+# Caching headers
+# Long-lived caching for versioned/static assets
+[[headers]]
+  for = "/assets/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML should not be cached long to ensure fresh content
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
