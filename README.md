@@ -23,7 +23,9 @@
 
 <!-- BADGES -->
 <p align="center">
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/brennanbrown/enjoyment-work"><img alt="Deploy to Netlify" src="https://www.netlify.com/img/deploy/button.svg"></a>
+  <a href="https://app.netlify.com/start/deploy?repository=https://github.com/brennanbrown/enjoyment-work"><img alt="Deploy to Netlify" src="https://www.netlify.com/img/deploy/button.svg"></a>
+</p>
+<p align="center">
 <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/3cc0e6e6-1ec8-4af8-ad0e-aced073231c4/deploy-status">
 <a href="https://github.com/brennanbrown/enjoyment-work/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/brennanbrown/enjoyment-work/actions/workflows/ci.yml/badge.svg"></a>
 <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/brennanbrown/enjoyment-work"> 
