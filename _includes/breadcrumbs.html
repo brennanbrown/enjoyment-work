@@ -12,3 +12,24 @@
         {% endif %}
     {% endfor %}
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": {{ site.url | append: '/' | jsonify }}
+    }{% assign path = '' %}{% for crumb in crumbs offset: 1 %}{% assign path = path | append: '/' | append: crumb %},
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index | plus: 1 }},
+      "name": {{ crumb | replace:'-',' ' | remove:'.html' | capitalize | jsonify }},
+      "item": {{ site.url | append: path | append: '/' | replace:'without-plugin/','without-plugins/' | jsonify }}
+    }{% endfor %}
+  ]
+}
+</script>
