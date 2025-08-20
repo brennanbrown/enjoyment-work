@@ -96,7 +96,43 @@
         {%- elsif url == "wrap" -%}
             {%- assign link_text = '<div class="boxit">' | append: title | append: '</div>' -%}
         {%- elsif url == "img" -%}
-            {%- assign link_text = '<img src="' | append: title | append: '"/>' -%}
+            {%- comment -%}
+            Support optional dimension hints in the title for responsive images.
+            Examples:
+            [[/assets/img/pic.jpg::img]]                         -> no explicit dimensions
+            [[/assets/img/pic.jpg::img|800x600]]                 -> width=800 height=600
+            [[/assets/img/pic.jpg::img|w=800,h=600]]             -> width=800 height=600
+            [[/assets/img/pic.jpg::img|w=800]]                   -> width only
+            [[/assets/img/pic.jpg::img|w=800,h=auto]]            -> height auto (omitted)
+            {%- endcomment -%}
+            {%- assign img_parts = title | split:'|' -%}
+            {%- assign img_src = img_parts[0] | strip -%}
+            {%- assign dim_spec = img_parts[1] | default: '' | strip -%}
+            {%- assign w = '' -%}
+            {%- assign h = '' -%}
+            {%- if dim_spec contains 'x' and dim_spec contains '0' or dim_spec contains '1' or dim_spec contains '2' or dim_spec contains '3' or dim_spec contains '4' or dim_spec contains '5' or dim_spec contains '6' or dim_spec contains '7' or dim_spec contains '8' or dim_spec contains '9' -%}
+                {%- assign dims = dim_spec | split:'x' -%}
+                {%- assign w = dims[0] | strip -%}
+                {%- assign h = dims[1] | default: '' | strip -%}
+            {%- elsif dim_spec contains '=' -%}
+                {%- assign kvs = dim_spec | split:',' -%}
+                {%- for kv in kvs -%}
+                    {%- assign pair = kv | split:'=' -%}
+                    {%- assign k = pair[0] | strip | downcase -%}
+                    {%- assign v = pair[1] | default: '' | strip -%}
+                    {%- if k == 'w' -%}
+                        {%- assign w = v -%}
+                    {%- elsif k == 'h' -%}
+                        {%- assign h = v -%}
+                    {%- endif -%}
+                {%- endfor -%}
+            {%- endif -%}
+            {%- assign alt_text = img_src -%}
+            {%- assign sizes_attr = '(max-width: 800px) 100vw, 800px' -%}
+            {%- capture img_tag -%}
+<img src="{{ img_src }}" alt="{{ alt_text }}" loading="lazy" decoding="async" sizes="{{ sizes_attr }}"{% if w != '' %} width="{{ w }}"{% endif %}{% if h != '' and h != 'auto' %} height="{{ h }}"{% endif %} style="height:auto;"/>
+            {%- endcapture -%}
+            {%- assign link_text = img_tag -%}
         {%- elsif url == "lsn" or url == "rsn" or url == "lsn-transclude" or url == "rsn-transclude"  or url == "lmn" or url == "rmn" or url == "lmn-transclude" or url == "rmn-transclude" -%}
             {%- assign toggleLabel = "" -%}
             {%- assign sideNoteNum = "" -%}
