@@ -3,7 +3,7 @@ title: "Enjoyment Work"
 tagline: " — a Digital Garden 🌱"
 name: "Brennan Kenneth Brown"
 author_bio:
-  "Hey there! My name is Brennan, I'm a 27-year-old Métis web developer and content strategist from Winnipeg,
+  "Hey there! My name is Brennan, I'm a 29-year-old Métis web developer and content strategist from Winnipeg,
   Manitoba and currently reside in Calgary, Alberta. I've recently compeleted a Full Stack Developer Program
   at EvolveU, and I'm looking to help those that need web development work done, or searching for ideas and
   management for their next content project."
@@ -14,6 +14,8 @@ footer_description:
   has or works in a dirt garden, we all share a familiarity with the idea of what a garden is.'
 notes_url: "https://enjoyment-work.netlify.app"
 profile_pic: "https://brennanbrown.ca/img/avatar.jpg"
+profile_pic_width: 120
+profile_pic_height: 120
 favicon: /assets/img/favicon.png
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://enjoyment-work.netlify.app/" # the base hostname & protocol for your site, e.g. https://example.com
@@ -38,6 +40,7 @@ plugins:
   - jekyll-toc
 
 markdown: kramdown
+excerpt_separator: "<!--more-->"
 
 kramdown:
   input: GFM
@@ -48,8 +51,8 @@ kramdown:
 
 sass:
   style: compressed
-
-JEKYLL_ENV: "production"
+  load_paths:
+    - assets/css
 
 collections:
   notes:
