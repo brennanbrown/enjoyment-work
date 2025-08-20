@@ -13,7 +13,7 @@
         <div class="userboard profile-board-col">
             <div class="username">
                 <span>
-                    <a " href="/about">{{site.name}}</a>
+                    <a href="/about">{{site.name}}</a>
                 </span>
             </div>
             <div class=" userdesc">
@@ -25,77 +25,87 @@
             </div>
         </div>
     </div>
-    <div class="main-site-subheader menu disable-select text-center">
+    <nav class="main-site-subheader menu disable-select text-center" aria-label="Primary">
         <div class="about">
-            <a " href="/about">
+            <a href="/about"{% if page.url == '/about/' %} aria-current="page"{% endif %}>
                 <i class=" fas fa-signature"></i>
                 About
             </a>
         </div>
         <div class="hashtags">
-            <a " href="/tags">
+            <a href="/tags"{% if page.url == '/tags/' %} aria-current="page"{% endif %}>
                 <i class=" fas fa-hashtag"></i>
                 Tags
             </a>
         </div>
         <div class="categories">
-            <a " href="/categories">
+            <a href="/categories"{% if page.url == '/categories/' %} aria-current="page"{% endif %}>
                 <i class=" far fa-folder-open"></i>
                 Categories
             </a>
         </div>
         <div class="archive">
-            <a " href="/archive">
+            <a href="/archive"{% if page.url == '/archive/' %} aria-current="page"{% endif %}>
                 <i class=" fas fa-archive"></i>
                 Archive
             </a>
         </div>
         <div class="rss">
-            <a " href="/feed.xml">
+            <a href="/feed.xml"{% if page.url == '/feed.xml' %} aria-current="page"{% endif %}>
                 <i class=" fas fa-rss"></i>
                 RSS
             </a>
         </div>
         <div class="donate">
-            <a href="{{ site.donate_link }}" ">
+            <a href="{{ site.donate_link }}">
                 <i class=" fas fa-dollar-sign"></i>
                 Donate
             </a>
         </div>
-    </div>
+        <div class="theme-toggle">
+            <button id="theme-toggle" class="btn btn-sm" type="button" aria-label="Toggle dark mode">
+                <i class="fas fa-adjust" aria-hidden="true"></i>
+                <span class="sr-only">Toggle theme</span>
+            </button>
+        </div>
+    </nav>
     <div class="searchbar search-container sans">
         <i aria-hidden="true" class="fa fa-search"></i>
         <input autocomplete="off" id="search-input" oninput="changeResultContainerDisp(this.value)" placeholder="Search Enjoyment Work..." type="text"/>
         <label for="search-input"></label>
         <ul id="results-container"></ul>
     </div>
-    <script src="/assets/js/simple-jekyll-search.min.js"></script>
+    <script defer src="/assets/js/simple-jekyll-search.min.js"></script>
     <script>
-        function changeResultContainerDisp(val) {
-            if (val) {
-                document.getElementById("results-container").style.display = "block";
-                document.getElementById("search-input").addEventListener('blur', function () {
-                    document.addEventListener('click', function (event) {
-                        var isClickInside = document.getElementById("results-container").contains(event
-                            .target);
-                        if (!isClickInside) {
-                            document.getElementById("results-container").style.display = "none";
-                        }
-                    })
-                })
-            } else {
-                document.getElementById("results-container").style.display = "none";
-            }
-        }
-        var sjs = SimpleJekyllSearch({
-            searchInput: document.getElementById('search-input'),
-            resultsContainer: document.getElementById('results-container'),
-            json: '/search.json',
-            searchResultTemplate: '<li class="search_res" style="list-style: none;"><a href="{{ site.url }}{url}" color: #555555;"><p><strong>></strong> {title}</p></a></li>',
-            noResultsText: 'No results found. Try another search.',
-            fuzzy: false,
-            limit: 5
-        })
+        window.addEventListener('DOMContentLoaded', function () {
+          function changeResultContainerDisp(val) {
+              if (val) {
+                  document.getElementById("results-container").style.display = "block";
+                  document.getElementById("search-input").addEventListener('blur', function () {
+                      document.addEventListener('click', function (event) {
+                          var isClickInside = document.getElementById("results-container").contains(event.target);
+                          if (!isClickInside) {
+                              document.getElementById("results-container").style.display = "none";
+                          }
+                      })
+                  })
+              } else {
+                  document.getElementById("results-container").style.display = "none";
+              }
+          }
+          window.changeResultContainerDisp = changeResultContainerDisp;
+          if (window.SimpleJekyllSearch) {
+            var sjs = SimpleJekyllSearch({
+                searchInput: document.getElementById('search-input'),
+                resultsContainer: document.getElementById('results-container'),
+                json: '/search.json',
+                searchResultTemplate: '<li class="search_res" style="list-style: none;"><a class="search-link" href="{url}"><p><strong>&gt;</strong> {title}</p></a></li>',
+                noResultsText: 'No results found. Try another search.',
+                fuzzy: false,
+                limit: 5
+            });
+          }
+        });
     </script>
     {%- if page.permalink != "/" -%}
         {% include breadcrumbs.html %}
