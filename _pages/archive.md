@@ -1,6 +1,7 @@
 ---
 layout: page
 permalink: /archive
+excerpt: "Browse all posts and notes by collection."
 ---
 
 {% for collection in site.collections %}

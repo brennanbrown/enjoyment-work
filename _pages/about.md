@@ -9,7 +9,7 @@ author: false
 <div class="row pt-5">
    <div class="col-lg-4">
       <h1 class="text-center">Who I Am</h1>
-      <img class="mx-auto d-block mb-3" src="https://brennanbrown.ca/img/avatar.jpg" height="300" alt="Photo of Brennan">
+      <img class="mx-auto d-block mb-3" src="https://brennanbrown.ca/images/hero/hero-image.jpg" height="300" alt="Photo of Brennan">
       <p class="text-center">
             <a href="https://dev.to/brennan"><img
                   src="https://img.shields.io/badge/-dev&#46;to-0A0A0A?style=flat&amp;labelColor=0A0A0A&amp;logo=dev.to&amp;logoColor=white&amp;link=https://dev.to/brennan"
@@ -56,7 +56,7 @@ author: false
 
    <br />
    <div class="text-justify mr-2">
-         <p>Hey there! My name is Brennan, I&#39;m a 24-year-old Métis web developer and content strategist from
+         <p>Hey there! My name is Brennan, I&#39;m a 29-year-old Métis web developer and content strategist from
             Winnipeg, Manitoba and currently reside in Calgary, Alberta. I've recently compeleted a Full Stack
             Developer Program at <a href="https://www.evolveu.ca/">EvolveU</a>, and I&#39;m looking to help
             those
