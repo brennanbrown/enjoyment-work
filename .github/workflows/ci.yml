@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: .ruby-version
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3
+
+      - name: Build site
+        run: |
+          bundle exec jekyll build --trace
+
+      - name: HTMLProofer
+        run: |
+          bundle exec htmlproofer ./_site \
+            --check_html \
+            --check_opengraph \
+            --check_favicon \
+            --allow_hash_href \
+            --assume-extension \
+            --typhoeus='{"timeout": 15, "connecttimeout": 15, "followlocation": true}' \
+            --http-status-ignore 429,999 \
+            --url-ignore "^mailto:"
