@@ -1,7 +1,17 @@
 {%- if page.author != false -%}
     <div class="row" id="author">
         <div class="col-xl-3 col-12">
-            <img src="{{ site.profile_pic }}" class="img-thumbnail d-block mx-auto"/>
+            <img
+              src="{{ site.profile_pic }}"
+              class="img-thumbnail d-block mx-auto"
+              alt="{{ site.name }}"
+              loading="lazy"
+              decoding="async"
+              fetchpriority="low"
+              {%- if site.profile_pic_width and site.profile_pic_height -%}
+              width="{{ site.profile_pic_width }}" height="{{ site.profile_pic_height }}"
+              {%- endif -%}
+            />
         </div>
         <div class="col-xl-9 col-12" id="author-text">
             <h2 class="text-lg-left text-center">
