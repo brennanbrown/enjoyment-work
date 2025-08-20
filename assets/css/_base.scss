@@ -1,0 +1,121 @@
+// Base element styles (migrate gradually)
+body {
+  font-family: $font-stack;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+code, pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Migrated base typography and elements from legacy style.css (no changes) */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Inter, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", Ubuntu, sans-serif;
+  min-height: 450px;
+  counter-reset: sidenote-counter;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-legacy);
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+a,
+p,
+ul,
+li,
+ol,
+table,
+span,
+blockquote { color: var(--text-legacy); }
+
+p,
+ul,
+li,
+ol { font-size: 18px; }
+
+/* Pre/code wrapping rules */
+kbd,
+samp,
+var,
+pre {
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+  font-family: "Lucida Console", Monaco, monospace;
+  overflow: auto !important;
+  padding: 10px;
+  vertical-align: middle;
+  border: 3px solid var(--border-soft);
+  width: 100%;
+}
+
+img { max-width: 100%; height: auto; }
+
+blockquote:before { display: none; }
+
+blockquote {
+  font-size: 120%;
+  padding: 0 10px;
+  border-left: 3px var(--muted) solid;
+  font-style: italic;
+  font-family: Georgia, serif;
+}
+
+blockquote p { text-align: justify; }
+
+cite {
+  padding-left: 10%;
+  font-style: normal;
+}
+
+table {
+  width: 100%;
+  border-radius: 5px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  color: var(--text-legacy);
+  padding: 8px;
+  text-align: left;
+}
+
+td { font-size: 14px; }
+
+td a { color: inherit; text-decoration: none; }
+
+b,
+strong { font-weight: 600; }
+
+hr {
+  background-color: var(--hr);
+  color: var(--hr);
+  border: 0 none;
+  height: 2px;
+}
+
+/* Lists */
+ul ul { list-style-type: disc; }
+
+/* Table enhancements */
+table th { font-weight: 600; }
+tr { border-radius: 5px; }
+thead tr:nth-child(odd) { background-color: var(--bg-subtler); }
+tbody tr:nth-child(even) { background-color: var(--bg-subtle); }

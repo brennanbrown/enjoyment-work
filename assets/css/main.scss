@@ -1,0 +1,200 @@
+---
+---
+// Main SCSS entrypoint. Gradually migrate from style.css into partials.
+
+@import "variables";
+@import "base";
+@import "components";
+@import "utilities";
+@import "legacy";
+
+/* Minimal overrides and dark mode variables scaffold */
+:root {
+  /* === Base theme (core) === */
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #666666;
+  --link: #0b70ff;
+  --border: #e5e7eb;
+
+  /* === Legacy-friendly tokens (visual parity during migration) === */
+  --text-legacy: #555555;
+  --text-weak: #888888;
+  --text-strong: #000000;
+
+  /* === Surfaces === */
+  --panel: #ffffff;
+  --bg-subtle: #f7f7f7;
+  --bg-subtler: #eeeeee;
+  --bg-muted: #f1f1f1;
+  /* Specific component surfaces */
+  --related-bg: #eeeeee; /* legacy light */
+
+  /* === Borders and shadows === */
+  --hr: #cccccc;
+  --border-soft: #e9e9e9;
+  --border-legacy: #dfdfdf;
+  --shadow-weak: #dddddd;
+  --shadow-weak-2: #cfcfcf;
+
+  /* === Links and brand === */
+  --brand-link: #0357ac;
+
+  /* === Footer === */
+  --footer-bg: #333333;
+  --footer-text: #eeeeee;
+  --footer-link: #cccccc;
+
+  /* === Forms and focus === */
+  --placeholder: #999999;
+  --focus-glow: #a7d0eb;
+
+  /* === Accents (badges/icons) === */
+  --accent-purple: #6f1f91;
+  --accent-blue: #3878a0;
+  --accent-green: #56712d;
+  --accent-gold: #cfa531;
+  --accent-red: #da6064;
+
+  /* === Header chip/link styles === */
+  --header-chip-bg: #333333;
+  --header-chip-text: #ffffff;
+  --header-link-hover: #fffc99;
+  --header-chip-bg-legacy: #333333;
+  --header-chip-text-legacy: #ffffff;
+  --header-link-hover-legacy: #fffc99;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* === Base theme (core) — dark === */
+    --bg: #0b0d12;
+    --text: #e5e7eb;
+    --muted: #a3a3a3;
+    --link: #8ab4ff;
+    --border: #1f2937;
+
+    /* === Legacy-friendly tokens — dark === */
+    --text-legacy: #e0e0e0;
+    --text-weak: #a8b3bb;
+    --text-strong: #e5e7eb;
+
+    /* === Surfaces — dark === */
+    --panel: #0f131a;
+    --bg-subtle: #121621;
+    --bg-subtler: #0f141f;
+    --bg-muted: #121621;
+    /* Specific component surfaces */
+    --related-bg: #0f1217; /* legacy dark */
+
+    /* === Borders and shadows — dark === */
+    --hr: #2a2f36;
+    --border-soft: #2a3443;
+    --border-legacy: #2a3443;
+    --shadow-weak: #111318;
+    --shadow-weak-2: #0f1217;
+
+    /* === Links and brand — dark === */
+    --brand-link: #8ab4ff;
+
+    /* === Footer — dark === */
+    --footer-bg: #0f1217;
+    --footer-text: #e5e7eb;
+    --footer-link: #a8b3bb;
+
+    /* === Forms and focus — dark === */
+    --placeholder: #9aa4af;
+    --focus-glow: #355d80;
+
+    /* === Accents (badges/icons) — dark === */
+    --accent-purple: #b892ff;
+    --accent-blue: #86c5ff;
+    --accent-green: #8ad47a;
+    --accent-gold: #ffd272;
+    --accent-red: #ff8da0;
+
+    /* === Header chip/link styles — dark === */
+    --header-chip-bg: #0f1217;
+    --header-chip-text: #e5e7eb;
+    --header-link-hover: #ffe082;
+  }
+}
+
+/* Explicit theme overrides via data-theme attribute */
+:root[data-theme="light"] {
+  /* Base */
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #666666;
+  --link: #0b70ff;
+  --border: #e5e7eb;
+  /* Legacy */
+  --text-legacy: #555555;
+  --text-weak: #888888;
+  /* Surfaces */
+  --panel: #ffffff;
+  --bg-subtle: #f7f7f7;
+  --bg-subtler: #eeeeee;
+  --shadow-weak: #dddddd;
+  --related-bg: #eeeeee;
+  /* Borders/brand/footer */
+  --border-legacy: #dfdfdf;
+  --brand-link: #0357ac;
+  --footer-bg: #333333;
+  --footer-text: #eeeeee;
+  --hr: #cccccc;
+}
+
+:root[data-theme="dark"] {
+  /* Base */
+  --bg: #0b0d12;
+  --text: #e5e7eb;
+  --muted: #a3a3a3;
+  --link: #8ab4ff;
+  --border: #1f2937;
+  /* Legacy */
+  --text-legacy: #e0e0e0;
+  --text-weak: #a8b3bb;
+  --text-strong: #e5e7eb;
+  /* Surfaces */
+  --panel: #0f131a;
+  --bg-subtle: #121621;
+  --bg-subtler: #0f141f;
+  --bg-muted: #121621;
+  --related-bg: #0f1217;
+  /* Borders/brand/footer */
+  --border-legacy: #2a3443;
+  --brand-link: #8ab4ff;
+  --footer-bg: #0f1217;
+  --footer-text: #e5e7eb;
+  --hr: #2a2f36;
+  --border-soft: #2a3443;
+  --footer-link: #a8b3bb;
+  --shadow-weak: #111318;
+  --shadow-weak-2: #0f1217;
+  /* Forms/focus + accents + header chip */
+  --bg-muted: #121621;
+  --placeholder: #9aa4af;
+  --focus-glow: #355d80;
+  --accent-purple: #b892ff;
+  --accent-blue: #86c5ff;
+  --accent-green: #8ad47a;
+  --accent-gold: #ffd272;
+  --accent-red: #ff8da0;
+  --header-chip-bg: #0f1217;
+  --header-chip-text: #e5e7eb;
+  --header-link-hover: #ffe082;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+a { color: var(--link); }
+
+hr, .border, .divider { border-color: var(--border); }
+
+/* Temporary: small improvements without altering layout */
+img { height: auto; max-width: 100%; }
+img[loading="lazy"] { background: transparent; }

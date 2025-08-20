@@ -1,0 +1,61 @@
+// Legacy compatibility shims: IE-specific and rarely used helpers
+// Keep these isolated and imported last to avoid overriding modern styles unintentionally.
+
+/* IE-specific styling (IE10+ high-contrast detection) */
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+  .userdesc,
+  .username,
+  .link-to-notes,
+  .avatar,
+  .related { display: none !important; }
+
+  .dashboard,
+  .site-heading { display: inline-block; }
+
+  #scroll-head,
+  #disqus_thread { display: none !important; }
+
+  .sn-right,
+  .mn-right { margin-right: -30%; width: 25%; }
+
+  .sn-left,
+  .mn-left { margin-left: -30%; width: 25%; }
+
+  blockquote .sn-left,
+  blockquote .mn-left,
+  li .sn-left,
+  li .mn-left { margin-left: -38%; width: 24% !important; }
+
+  blockquote .sn-right,
+  blockquote .mn-right,
+  li .sn-right,
+  li .mn-right { margin-right: -30%; width: 25% !important; }
+
+  .box { border: none !important; }
+}
+
+/* Responsive helpers preserved from legacy (kept for parity) */
+@media screen and (max-width: 1024px) {
+  .sketch-left,
+  .sketch-right {
+    display: inline-block !important;
+    float: left !important;
+    left: 1rem !important;
+    clear: both !important;
+    width: 95% !important;
+    margin: 1rem 2.5% !important;
+    vertical-align: baseline !important;
+    position: relative !important;
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .box {
+    width: 100%;
+    max-width: 100% !important;
+    border-left: none !important;
+    border-right: none !important;
+  }
+}

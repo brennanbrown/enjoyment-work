@@ -1,0 +1,78 @@
+// Utility classes (small helpers)
+.mt-1 { margin-top: $space-1; }
+.mt-2 { margin-top: $space-2; }
+.mt-3 { margin-top: $space-3; }
+.mt-4 { margin-top: $space-4; }
+
+.mb-1 { margin-bottom: $space-1; }
+.mb-2 { margin-bottom: $space-2; }
+.mb-3 { margin-bottom: $space-3; }
+.mb-4 { margin-bottom: $space-4; }
+
+.text-muted { color: var(--muted); }
+.border { border: 1px solid var(--border); }
+
+/* Search result link inherits context color */
+.search-link { color: inherit; text-decoration: none; }
+.search-link:hover { text-decoration: underline; }
+
+/* Accessibility utility */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Skip to main content link: hidden until focused/active */
+a.skip-main {
+  left: -999px;
+  position: absolute;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -999;
+}
+
+a.skip-main:focus,
+a.skip-main:active {
+  color: #fff;
+  background-color: #000;
+  left: auto;
+  top: auto;
+  width: 30%;
+  height: auto;
+  overflow: auto;
+  margin: 10px 35%;
+  padding: 5px;
+  border-radius: 15px;
+  border: 4px solid yellow;
+  text-align: center;
+  font-size: 1.2em;
+  z-index: 999;
+}
+
+/* Legacy utilities */
+.disable-select {
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.default-color { color: var(--text-legacy) !important; }
+.default-background { background-color: var(--bg-subtle) !important; }
+
+/* Typography helpers */
+.serif { font-family: Georgia, serif !important; }
+.sans { font-family: Inter, "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", Ubuntu, sans-serif !important; }
+
+/* Layout helpers */
+.row { margin: 0; }
