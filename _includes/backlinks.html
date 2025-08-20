@@ -3,21 +3,21 @@
 {%- assign wiki_link_title = '[' | append: page.title | append: ']' -%}
 {%- for note in site.notes -%}
     {%- if note.url != page.url -%}
-        {%- if note.content contains wiki_link_title -%}
+        {%- if note.content contains wiki_link_title or note.content contains page.url -%}
             {%- assign link_count = link_count | plus:1 -%}
         {%- endif -%}
     {%- endif -%}
 {%- endfor -%}
 {%- for note in site.posts -%}
     {%- if note.url != page.url -%}
-        {%- if note.content contains wiki_link_title -%}
+        {%- if note.content contains wiki_link_title or note.content contains page.url -%}
             {%- assign link_count = link_count | plus:1 -%}
         {%- endif -%}
     {%- endif -%}
 {%- endfor -%}
 {%- for note in site.pages -%}
     {%- if note.url != page.url -%}
-        {%- if note.content contains wiki_link_title -%}
+        {%- if note.content contains wiki_link_title or note.content contains page.url -%}
             {%- assign link_count = link_count | plus:1 -%}
         {%- endif -%}
     {%- endif -%}
@@ -29,7 +29,7 @@
         <div class="related-wrapper">
             {%- for note in site.notes -%}
                 {%- if note.url != page.url -%}
-                    {%- if note.content contains wiki_link_title -%}
+                    {%- if note.content contains wiki_link_title or note.content contains page.url -%}
                         <div class="related-group">
                             <a href="{{note.url}}">
                                 <p class="related-title">{{ note.title }}</p>
@@ -41,7 +41,7 @@
             {%- endfor -%}
             {%- for note in site.posts -%}
                 {%- if note.url != page.url -%}
-                    {%- if note.content contains wiki_link_title -%}
+                    {%- if note.content contains wiki_link_title or note.content contains page.url -%}
                         <div class="related-group">
                             <a href="{{note.url}}">
                                 <p class="related-title">{{ note.title }}</p>
@@ -53,7 +53,7 @@
             {%- endfor -%}
             {%- for note in site.pages -%}
                 {%- if note.url != page.url -%}
-                    {%- if note.content contains wiki_link_title -%}
+                    {%- if note.content contains wiki_link_title or note.content contains page.url -%}
                         <div class="related-group">
                             <a href="{{note.url}}">
                                 <p class="related-title">{{ note.title }}</p>
