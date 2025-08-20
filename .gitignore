@@ -103,3 +103,17 @@ tmp
 #####################
 .VimballRecord
 .netrwhist
+
+# Lighthouse reports
+lighthouse/
+.lighthouseci/
+
+# Editor settings
+.vscode/
+
+# Ruby bundle config
+.bundle/
+
+# Local env files
+.env
+.env.*.local
