@@ -8,12 +8,12 @@ content-type: eg
 <style>
 .date-content a {
     text-decoration: none;
-    color: #4183c4;
+    color: #0645ad;
 }
 
 .date-content a:hover {
     text-decoration: underline;
-    color: #4183c4;
+    color: #063e9b;
 }
 </style>
 
@@ -24,11 +24,11 @@ content-type: eg
     {% for day in postsByDay %}
       <h3 id="{{ day.name }}">{{ day.name }}</h3>
           {% for post in day.items %}
-            <li id="date-content" style="padding-bottom: 0.6em; list-style: none;"><a href="{{ post.url }}">{{ post.title }}</a></li>
+            <li class="date-content" style="padding-bottom: 0.6em; list-style: none;"><a href="{{ post.url }}">{{ post.title }}</a></li>
           {% endfor %}
     {% endfor %}
 
-        <br/>
-        <br/>
+        <br>
+        <br>
 
 </main>

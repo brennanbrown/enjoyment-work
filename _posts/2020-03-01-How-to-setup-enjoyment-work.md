@@ -13,7 +13,7 @@ This is going to be a super simple post about how to setup and use this theme fo
 Q. What will it look like when I am done setting it up?
 
 > This is what it should look (minus the exact essays ofcourse):
-> <img src="/assets/img/end_result.jpg" style="box-shadow: 2px 2px 20px 0 #ddd;"/>
+> <img src="/assets/img/end_result.jpg" alt="Example of the site end result" style="box-shadow: 2px 2px 20px 0 #ddd;"/>
 
 Now without further ado, let's get started!
 
@@ -38,7 +38,7 @@ To simplify things, I provide the template showed in the image above to get star
 
 Visit the GitHub page for my template repository ([[raghuveerdotnet/jekyll-seamless::https://github.com/raghuveerdotnet/jekyll-seamless]]), and fork it to your account using the Fork button:
 
-> <img src="/assets/img/fork_button.jpg" style="box-shadow: 2px 2px 20px 0 #ddd;"/>
+> <img src="/assets/img/fork_button.jpg" alt="GitHub Fork button screenshot" style="box-shadow: 2px 2px 20px 0 #ddd;"/>
 
 Once the forking process is complete, you should have a fork (essentially a copy) of my template in your own GitHub account. On the GitHub page for your repository, click on the green “Clone or download” button, and copy the URL: we’ll need it for the next step.
 

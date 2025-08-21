@@ -68,7 +68,7 @@
                 {%- assign post = site.posts | where: 'title',title -%}
             {%- endif -%}
             {%- assign excerpt = post[0].content | markdownify | strip_html | truncate: 500 | newline_to_br -%}
-            {%- assign link_text = '<span class="infotip"><a href="' | append: url | append: '">' | append: title | append: '</a><span class="right bottom"><span class="infotip-title">' | append: title | append: '</span><br/><span class="infotip-excerpt">' | append: excerpt | append: '</span><i></i></span></span>' -%}
+            {%- assign link_text = '<span class="infotip"><a href="' | append: url | append: '">' | append: title | append: '</a><span class="right bottom"><span class="infotip-title">' | append: title | append: '</span><br><span class="infotip-excerpt">' | append: excerpt | append: '</span><i></i></span></span>' -%}
         {%- endif -%}
         {%- assign bracket_link = '[[' | append: title | append: ']]' -%}
         {%- assign replaced_content = replaced_content | replace: bracket_link,link_text -%}
@@ -130,7 +130,7 @@
             {%- assign alt_text = img_src -%}
             {%- assign sizes_attr = '(max-width: 800px) 100vw, 800px' -%}
             {%- capture img_tag -%}
-<img src="{{ img_src }}" alt="{{ alt_text }}" loading="lazy" decoding="async" sizes="{{ sizes_attr }}"{% if w != '' %} width="{{ w }}"{% endif %}{% if h != '' and h != 'auto' %} height="{{ h }}"{% endif %} style="height:auto;"/>
+<img src="{{ img_src }}" alt="{{ alt_text }}" loading="lazy" decoding="async" sizes="{{ sizes_attr }}"{% if w != '' %} width="{{ w }}"{% endif %}{% if h != '' and h != 'auto' %} height="{{ h }}"{% endif %} style="height:auto;">
             {%- endcapture -%}
             {%- assign link_text = img_tag -%}
         {%- elsif url == "lsn" or url == "rsn" or url == "lsn-transclude" or url == "rsn-transclude"  or url == "lmn" or url == "rmn" or url == "lmn-transclude" or url == "rmn-transclude" -%}
@@ -157,9 +157,9 @@
                     {%- assign post = site.posts | where: 'title',title -%}
                 {%- endif -%}
                 {%- assign excerpt = post[0].content | strip_html | truncate: 280 -%}
-                {%- assign link_text = '<label for="' | append: url | append: '-' | append: sideNoteCounter | append: '" class="margin-toggle ' | append: sideNoteNum | append: ' ">' | append: toggleLabel | append: '</label><input type="checkbox" id="' | append: url | append: '-' | append: sideNoteCounter | append: '" class="margin-toggle"/><span class="' | append: noteType | append: '"><a href="' | append: post[0].url  | append: '"> <span style="background-color: #ffffc4; color: #555;">Transclusion</span><br/><b>' | append: title | append: '</b><br/>' | append: excerpt | append: '</a></span>' -%}
+                {%- assign link_text = '<label for="' | append: url | append: '-' | append: sideNoteCounter | append: '" class="margin-toggle ' | append: sideNoteNum | append: ' ">' | append: toggleLabel | append: '</label><input type="checkbox" id="' | append: url | append: '-' | append: sideNoteCounter | append: '" class="margin-toggle"><span class="' | append: noteType | append: '"><a href="' | append: post[0].url  | append: '"> <span style="background-color: #ffffc4; color: #555;">Transclusion</span><br><b>' | append: title | append: '</b><br>' | append: excerpt | append: '</a></span>' -%}
             {%- else -%}
-                {%- assign link_text = '<label for="' | append: url | append: '-' | append: sideNoteCounter | append: '" class="margin-toggle ' | append: sideNoteNum | append: ' ">' | append: toggleLabel | append: '</label><input type="checkbox" id="' | append: url | append: '-' | append: sideNoteCounter | append: '" class="margin-toggle"/><span class="' | append: noteType | append: '">' | append: title | append: '</span>' -%}
+                {%- assign link_text = '<label for="' | append: url | append: '-' | append: sideNoteCounter | append: '" class="margin-toggle ' | append: sideNoteNum | append: ' ">' | append: toggleLabel | append: '</label><input type="checkbox" id="' | append: url | append: '-' | append: sideNoteCounter | append: '" class="margin-toggle"><span class="' | append: noteType | append: '">' | append: title | append: '</span>' -%}
             {%- endif -%}
 
             {%- assign sideNoteCounter = sideNoteCounter | plus:1 -%}

@@ -7,7 +7,7 @@ Fractalize your mental patterns instead of reading as a whole (i.e., one single 
 
 {:.serif .medium}
 
-> "Be bored with a book, not with the act of reading"<br/> > <cite>—Nassim Nicholas Taleb, Antifragile</cite>
+> "Be bored with a book, not with the act of reading"<br> > <cite>—Nassim Nicholas Taleb, Antifragile</cite>
 
 ## References
 

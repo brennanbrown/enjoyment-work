@@ -69,10 +69,10 @@
             </button>
         </div>
     </nav>
-    <div class="searchbar search-container sans">
+    <div class="searchbar search-container sans" role="search" aria-label="Site search">
         <i aria-hidden="true" class="fa fa-search"></i>
-        <input autocomplete="off" id="search-input" oninput="changeResultContainerDisp(this.value)" placeholder="Search Enjoyment Work..." type="text"/>
-        <label for="search-input"></label>
+        <input autocomplete="off" id="search-input" oninput="changeResultContainerDisp(this.value)" placeholder="Search Enjoyment Work..." type="text" aria-label="Search"/>
+        <label for="search-input" class="sr-only">Search</label>
         <ul id="results-container"></ul>
     </div>
     <script defer src="/assets/js/simple-jekyll-search.min.js"></script>

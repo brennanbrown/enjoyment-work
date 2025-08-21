@@ -38,7 +38,7 @@
 <a href="https://github.com/brennanbrown?tab=followers"><img alt="GitHub followers" src="https://img.shields.io/github/followers/brennanbrown?label=Follow%20Me%21&style=social"></a>
 <a href="https://github.com/brennanbrown/enjoyment-work/watchers"><img alt="GitHub watchers" src="https://img.shields.io/github/watchers/brennanbrown/enjoyment-work?label=Watch%21&style=social"></a>
 <a href="https://github.com/brennanbrown/enjoyment-work/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/brennanbrown/enjoyment-work?label=Star%21&style=social"> </a>
-<a href="https://github.com/brennanbrown/enjoyment-work/network/members"><img alt="GitHub forks"src="https://img.shields.io/github/forks/brennanbrown/enjoyment-work?label=Fork%21&style=social"></a>
+<a href="https://github.com/brennanbrown/enjoyment-work/network/members"><img alt="GitHub forks" src="https://img.shields.io/github/forks/brennanbrown/enjoyment-work?label=Fork%21&style=social"></a>
 </p>
 
 > Note: A new update was released in 2025. See the detailed changes in the [Changelog](./CHANGELOG.md).

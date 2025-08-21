@@ -40,7 +40,7 @@ The neat stuff is it won't show up with an empty box if a given post doesn't hav
 
 Here is a screenshot of what mentions/backlinks will look like in a page:
 
-<img src="/assets/img/backlinks.png" style="border: 1px solid #f7f7f7; box-shadow: 2px 2px 20px 0 #ddd;" height="100%" width="80%"/>
+<img src="/assets/img/backlinks.png" alt="Backlinks panel screenshot" style="border: 1px solid #f7f7f7; box-shadow: 2px 2px 20px 0 #ddd;" height="100%" width="80%">
 
 In the above example, it can be seen that there are three links, it means that all the three pages have a link to the page in which they are being displayed as a backlink.
 
@@ -58,8 +58,8 @@ Context menus are a great way to improve user experience if they are done correc
 
 Here is a screenshot for people who are too lazy, while the rest of you can go back to the home page and try it out by right clicking on a particular feed entry:
 
-<img src="/assets/img/context_menu.png" style="border: 1px solid #f7f7f7; box-shadow: 2px 2px 20px 0 #ddd; fload: left;"  height="70%" width="45%"/>
-<img src="/assets/img/context_menu_backlinks.png" style="border: 1px solid #f7f7f7; box-shadow: 2px 2px 20px 0 #ddd;" height="70%" width="45%"/>
+<img src="/assets/img/context_menu.png" alt="Context menu on feed example" style="border: 1px solid #f7f7f7; box-shadow: 2px 2px 20px 0 #ddd; fload: left;"  height="70%" width="45%">
+<img src="/assets/img/context_menu_backlinks.png" alt="Context menu backlinks option" style="border: 1px solid #f7f7f7; box-shadow: 2px 2px 20px 0 #ddd;" height="70%" width="45%">
 
 ## On-hover page preview
 
@@ -115,7 +115,7 @@ If you have ever used a social media with feeds you probably have stalked the pr
 
 Here is the screenshot:
 
-<img src="/assets/img/profile_board.png" style="border: 1px solid #f7f7f7; box-shadow: 2px 2px 20px 0 #ddd;" height="100%" width="80%"/>
+<img src="/assets/img/profile_board.png" alt="Profile board screenshot" style="border: 1px solid #f7f7f7; box-shadow: 2px 2px 20px 0 #ddd;" height="100%" width="80%">
 
 #### Omnisearch bar
 
@@ -125,7 +125,7 @@ And I personally like this one because, it allows me as an author/writer to quic
 
 Here is a screenshot:
 
-<img src="/assets/img/search.png" style="border: 1px solid #f7f7f7; box-shadow: 2px 2px 20px 0 #ddd;" height="100%" width="80%"/>
+<img src="/assets/img/search.png" alt="Search bar screenshot" style="border: 1px solid #f7f7f7; box-shadow: 2px 2px 20px 0 #ddd;" height="100%" width="80%">
 
 **Note**: The searchbar is not implemented as a scrollspying widget that pins itself automatically is because I have a preference for distraction free content when reading, that is why the website provides a chevron to scroll to the top easily instead of pinning the search to the header.
 
@@ -137,7 +137,7 @@ And if you are still not sure of its utility, go join twitter or facebook or ins
 
 Untill then here is the screenshot:
 
-<img src="/assets/img/feed.png" style="box-shadow: 2px 2px 20px 0 #ddd;" height="100%" width="80%"/>
+<img src="/assets/img/feed.png" alt="Feed layout screenshot" style="box-shadow: 2px 2px 20px 0 #ddd;" height="100%" width="80%">
 
 #### Auto-tagging WIP posts on the feed
 
@@ -145,7 +145,7 @@ Sometimes you are writing something interesting but have not completed the entir
 
 Here is a screenshot.
 
-<img src="/assets/img/ongoing.png" style="border: 1px solid #f7f7f7; box-shadow: 2px 2px 20px 0 #ddd;" height="100%" width="80%"/>
+<img src="/assets/img/ongoing.png" alt="Ongoing tag screenshot" style="border: 1px solid #f7f7f7; box-shadow: 2px 2px 20px 0 #ddd;" height="100%" width="80%">
 
 #### Clickable tags
 
