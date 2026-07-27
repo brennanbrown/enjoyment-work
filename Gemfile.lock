@@ -87,7 +87,7 @@ GEM
       nokogiri (~> 1.11)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    json (2.13.2)
+    json (2.19.9)
     json-minify (0.0.3)
       json (> 0)
     kramdown (2.3.1)
